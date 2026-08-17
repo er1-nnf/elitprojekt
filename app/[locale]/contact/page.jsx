@@ -1,3 +1,4 @@
+import { pageAlternates } from "@/lib/seo";
 import ContactHero from "./ContactHero";
 import PlanedProjects from "@/sections/PlanedProjects";
 import ContactSection from "@/sections/ContactSection";
@@ -26,6 +27,7 @@ export async function generateMetadata({ params }) {
   const { locale } = await params;
   const meta = META[locale] ?? META.hr;
   return {
+    alternates: pageAlternates(locale, "/contact"),
     title: meta.title,
     description: meta.description,
   };

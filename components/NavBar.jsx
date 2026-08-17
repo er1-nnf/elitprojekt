@@ -81,16 +81,16 @@ const NavBar = ({ locale, isOpen, setOpen }) => {
         <div className="flex items-center justify-center gap-4">
           <LocaleSwitcher locale={locale} />
 
-          <NavItem
-            href={localeHref(locale, ROUTES.CONTACT)}
-            isActive={isActive(ROUTES.CONTACT)}
-          >
-            <span className="hidden lg:flex">
+          <div className="hidden lg:block">
+            <NavItem
+              href={localeHref(locale, ROUTES.CONTACT)}
+              isActive={isActive(ROUTES.CONTACT)}
+            >
               {strapiLocale === "hr-HR" && "Kontakt"}
               {strapiLocale === "en" && "Contact"}
               {strapiLocale === "de-DE" && "Kontakt"}
-            </span>
-          </NavItem>
+            </NavItem>
+          </div>
 
           <Link href={localeHref(locale, ROUTES.CONTACT)}>
             <button className="bg-ink text-white hover:bg-cta-color px-6 py-3 rounded-full text-sm font-medium xl:flex hidden transition-colors duration-200">

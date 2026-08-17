@@ -1,3 +1,4 @@
+import { pageAlternates } from "@/lib/seo";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import operation from "@/assets/images/whereWeOperate.webp";
@@ -48,6 +49,7 @@ export async function generateMetadata({ params }) {
   const { locale } = await params;
   const meta = META[locale] ?? META.hr;
   return {
+    alternates: pageAlternates(locale, "/about-us"),
     title: meta.title,
     description: meta.description,
   };

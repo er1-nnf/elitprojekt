@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import "../globals.css";
 
 import { LOCALES, URL_LOCALES } from "@/lib/locales";
+import { SITE_URL, pageAlternates } from "@/lib/seo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieBanner from "@/components/CookieBanner";
@@ -48,11 +49,24 @@ export async function generateMetadata({ params }) {
   const { locale } = await params;
   const meta = META[locale] ?? META.hr;
   return {
+    metadataBase: new URL(SITE_URL),
     title: meta.title,
     description: meta.description,
     icons: { icon: "/favicon.svg" },
-    alternates: {
-      languages: Object.fromEntries(URL_LOCALES.map((l) => [l, `/${l}`])),
+    alternates: pageAlternates(locale),
+    openGraph: {
+      type: "website",
+      siteName: "Elit Projekt",
+      locale: locale === "hr" ? "hr_HR" : "en_US",
+      title: meta.title,
+      description: meta.description,
+      images: [{ url: "/og.jpg", width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: meta.title,
+      description: meta.description,
+      images: ["/og.jpg"],
     },
   };
 }
@@ -80,6 +94,21 @@ export default async function LocaleLayout({ children, params }) {
         </Script>
       </head>
       <body className={`${inter.variable} ${bricolage.variable} font-sans`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Elit Projekt d.o.o.",
+              url: SITE_URL,
+              logo: `${SITE_URL}/og.jpg`,
+              email: "info@elitprojekt.com",
+              telephone: "+385 99 4339 499",
+              address: { "@type": "PostalAddress", addressCountry: "HR" },
+            }),
+          }}
+        />
         <LenisProvider>
           <Header locale={locale} />
           <div className="bg-white" id="main-container">

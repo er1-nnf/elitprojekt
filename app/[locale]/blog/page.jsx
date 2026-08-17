@@ -1,11 +1,14 @@
+import { pageAlternates } from "@/lib/seo";
 import BlogPost from "@/components/BlogPost";
 import { getBlogs } from "@/lib/strapi";
 
 // NOTE: the old BlogPage read blogs?.blogSeo?.metaTitle for the <Helmet>
 // title, but `blogs` is an array so both values were always undefined.
 // Behavior preserved: no page-specific metadata, falls back to the layout.
-export async function generateMetadata() {
-  return {};
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  return {
+    alternates: pageAlternates(locale, "/blog"),};
 }
 
 const BlogPage = async ({ params }) => {

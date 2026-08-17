@@ -1,3 +1,4 @@
+import { pageAlternates } from "@/lib/seo";
 import HeroSection from "@/sections/HeroSection";
 import PlanedProjects from "@/sections/PlanedProjects";
 import ConstructionProjects from "@/sections/ConstructionProjects";
@@ -31,6 +32,7 @@ export async function generateMetadata({ params }) {
   const { locale } = await params;
   const meta = META[locale] ?? META.hr;
   return {
+    alternates: pageAlternates(locale, ""),
     title: meta.title,
     description: meta.description,
   };

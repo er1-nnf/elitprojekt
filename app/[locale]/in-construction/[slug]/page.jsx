@@ -1,3 +1,4 @@
+import { pageAlternates } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
@@ -37,6 +38,10 @@ export async function generateMetadata({ params }) {
   return {
     title: `${project?.name} | ${project?.location} | Elit Projekt`,
     description: project?.description?.substring(0, 160),
+    alternates: pageAlternates(locale, `/in-construction/${slug}`),
+    openGraph: project?.coverImage?.url
+      ? { images: [{ url: project.coverImage.url }] }
+      : undefined,
   };
 }
 
@@ -56,6 +61,23 @@ const InConstructionDetails = async ({ params }) => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ApartmentComplex",
+            name: project.name,
+            url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://elitprojekt.com"}/${locale}/in-construction/${slug}`,
+            image: project?.coverImage?.url,
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: project?.location,
+              addressCountry: "HR",
+            },
+          }),
+        }}
+      />
       <div className="min-h-screen bg-white pt-32 lg:pt-44">
         <div className="mx-auto px-4 lg:px-8">
           {/* Property Title Mobile */}

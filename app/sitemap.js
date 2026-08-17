@@ -14,6 +14,11 @@ export default async function sitemap() {
       url: `${SITE_URL}/${locale}${path}`,
       changeFrequency: "weekly",
       priority: path === "" ? 1 : 0.8,
+      alternates: {
+        languages: Object.fromEntries(
+          URL_LOCALES.map((l) => [l, `${SITE_URL}/${l}${path}`])
+        ),
+      },
     }))
   );
 
@@ -26,6 +31,7 @@ export default async function sitemap() {
     for (const p of inPlans) {
       entries.push({
         url: `${SITE_URL}/${toUrlLocale(p.locale)}/in-plan/${p.slug}`,
+        lastModified: p.updatedAt || undefined,
         changeFrequency: "weekly",
         priority: 0.9,
       });
@@ -33,6 +39,7 @@ export default async function sitemap() {
     for (const p of inConstructions) {
       entries.push({
         url: `${SITE_URL}/${toUrlLocale(p.locale)}/in-construction/${p.slug}`,
+        lastModified: p.updatedAt || undefined,
         changeFrequency: "weekly",
         priority: 0.9,
       });

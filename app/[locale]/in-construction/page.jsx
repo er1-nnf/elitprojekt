@@ -1,3 +1,4 @@
+import { pageAlternates } from "@/lib/seo";
 import ProjectCard from "@/components/ProjectCard";
 import FaqComponent from "@/components/FaqComponent";
 import PlanedProjects from "@/sections/PlanedProjects";
@@ -12,8 +13,10 @@ const sortBySortNumber = (projects) =>
     return sortA - sortB;
   });
 
-export async function generateMetadata() {
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
   return {
+    alternates: pageAlternates(locale, "/in-construction"),
     title: "U Izgradnji | ElitProjekt | Stanovi Zagreb & Jadranska obala",
     description:
       "Pogledajte aktualne projekte u izgradnji ElitProjekt - stanovi u Zagrebu, objekti na jadranskoj obali. Kvalitetna gradnja, moderna rješenja, potpuna dokumentacija.",

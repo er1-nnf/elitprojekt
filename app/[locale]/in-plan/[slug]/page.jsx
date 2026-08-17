@@ -1,3 +1,4 @@
+import { pageAlternates } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
@@ -33,6 +34,10 @@ export async function generateMetadata({ params }) {
   return {
     title: `${project?.name} | ${project?.location} | Elit Projekt`,
     description: project?.description?.substring(0, 160),
+    alternates: pageAlternates(locale, `/in-plan/${slug}`),
+    openGraph: project?.coverImage?.url
+      ? { images: [{ url: project.coverImage.url }] }
+      : undefined,
   };
 }
 
@@ -52,6 +57,23 @@ const InPlanDetails = async ({ params }) => {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ApartmentComplex",
+            name: project.name,
+            url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://elitprojekt.com"}/${locale}/in-plan/${slug}`,
+            image: project?.coverImage?.url,
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: project?.location,
+              addressCountry: "HR",
+            },
+          }),
+        }}
+      />
       {/* Meta Pixel initialization for specific slug */}
       {slug === "projekt-zagreb-rudes" && <RudesPixel />}
 
