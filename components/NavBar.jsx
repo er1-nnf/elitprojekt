@@ -92,12 +92,13 @@ const NavBar = ({ locale, isOpen, setOpen }) => {
             </NavItem>
           </div>
 
-          <Link href={localeHref(locale, ROUTES.CONTACT)}>
-            <button className="bg-ink text-white hover:bg-cta-color px-6 py-3 rounded-full text-sm font-medium xl:flex hidden transition-colors duration-200">
-              {strapiLocale === "hr-HR" && "Želim nekretninu"}
-              {strapiLocale === "en" && "I want a property"}
-              {strapiLocale === "de-DE" && "Starte dein Projekt"}
-            </button>
+          <Link
+            href={localeHref(locale, ROUTES.CONTACT)}
+            className="bg-ink text-white hover:bg-cta-color px-6 py-3 rounded-full text-sm font-medium xl:inline-flex hidden transition-colors duration-200"
+          >
+            {strapiLocale === "hr-HR" && "Želim nekretninu"}
+            {strapiLocale === "en" && "I want a property"}
+            {strapiLocale === "de-DE" && "Starte dein Projekt"}
           </Link>
 
           {/* Mobile Hamburger */}
