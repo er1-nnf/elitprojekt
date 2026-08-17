@@ -10,13 +10,13 @@ import { localeHref } from "@/lib/locales";
 const MotionImage = motion.create(Image);
 
 const HeroSection = ({ locale, content }) => {
-  // Container animation variants
+  // Transform-only animations: elements stay visible (opacity 1) in the
+  // server-rendered HTML so the hero paints before hydration (LCP), then
+  // slide/scale into place once framer-motion takes over.
   const containerVariants = {
-    hidden: { opacity: 0 },
+    hidden: {},
     visible: {
-      opacity: 1,
       transition: {
-        duration: 0.6,
         staggerChildren: 0.2,
       },
     },
@@ -24,9 +24,8 @@ const HeroSection = ({ locale, content }) => {
 
   // Header content animation variants
   const headerVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { y: 30 },
     visible: {
-      opacity: 1,
       y: 0,
       transition: {
         duration: 0.8,
@@ -37,9 +36,8 @@ const HeroSection = ({ locale, content }) => {
 
   // Card animation variants
   const cardVariants = {
-    hidden: { opacity: 0, y: 60, scale: 0.95 },
+    hidden: { y: 60, scale: 0.95 },
     visible: {
-      opacity: 1,
       y: 0,
       scale: 1,
       transition: {
@@ -63,9 +61,8 @@ const HeroSection = ({ locale, content }) => {
 
   // Card title animation variants
   const titleVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { y: 20 },
     visible: {
-      opacity: 1,
       y: 0,
       transition: {
         duration: 0.6,
