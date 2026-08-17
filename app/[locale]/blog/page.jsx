@@ -15,7 +15,7 @@ const BlogPage = async ({ params }) => {
   return (
     <>
       <div className="px-4 py-32 flex flex-col items-center justify-center bg-white">
-        <h1 className="text-[60px] font-medium text-left mb-8">Blog</h1>
+        <h1 className="font-display font-semibold tracking-[-0.02em] text-[48px] sm:text-[56px] text-left mb-8">Blog</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogs?.map((blog, index) => (
             <BlogPost

@@ -58,15 +58,15 @@ const InPlanDetails = async ({ params }) => {
       <div className="min-h-screen bg-white pt-32 lg:pt-44">
         <div className="mx-auto px-4 lg:px-8">
           {/* Property Title Mobile */}
-          <h1 className="text-4xl lg:text-5xl font-normal text-dark-text flex lg:hidden pb-4">
+          <h1 className="font-display font-semibold tracking-[-0.02em] text-4xl lg:text-5xl text-ink flex lg:hidden pb-4">
             {project?.name}
           </h1>
 
           {/* Location and Type Tags Mobile */}
           <div className="flex lg:hidden flex-wrap gap-4 pb-8">
-            <div className="flex items-center gap-2 bg-light-gray/10 px-4 py-2 rounded-full">
+            <div className="flex items-center gap-2 border border-hairline bg-white px-4 py-2 rounded-full">
               <svg
-                className="w-4 h-4 text-dark-text"
+                className="w-3.5 h-3.5 text-muted"
                 fill="currentColor"
                 viewBox="0 0 20 20"
               >
@@ -76,20 +76,20 @@ const InPlanDetails = async ({ params }) => {
                   clipRule="evenodd"
                 />
               </svg>
-              <span className="text-sm font-medium text-dark-text">
+              <span className="text-[12px] tracking-[0.08em] uppercase text-light-gray">
                 {project?.location}
               </span>
             </div>
 
-            <div className="flex items-center gap-2 bg-light-gray/10 px-4 py-2 rounded-full">
+            <div className="flex items-center gap-2 border border-hairline bg-white px-4 py-2 rounded-full">
               <svg
-                className="w-4 h-4 text-dark-text"
+                className="w-3.5 h-3.5 text-muted"
                 fill="currentColor"
                 viewBox="0 0 20 20"
               >
                 <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
               </svg>
-              <span className="text-sm font-medium text-dark-text">
+              <span className="text-[12px] tracking-[0.08em] uppercase text-light-gray">
                 {project?.type}
               </span>
             </div>
@@ -110,15 +110,15 @@ const InPlanDetails = async ({ params }) => {
             <div className="order-2 lg:order-2">
               <div className="space-y-6">
                 {/* Property Title */}
-                <h1 className="text-4xl lg:text-5xl font-normal text-dark-text hidden lg:flex">
+                <h1 className="font-display font-semibold tracking-[-0.02em] text-4xl lg:text-5xl text-ink hidden lg:flex">
                   {project?.name}
                 </h1>
 
                 {/* Location and Type Tags */}
                 <div className="hidden lg:flex flex-wrap gap-4">
-                  <div className="flex items-center gap-2 bg-light-gray/10 px-4 py-2 rounded-full">
+                  <div className="flex items-center gap-2 border border-hairline bg-white px-4 py-2 rounded-full">
                     <svg
-                      className="w-4 h-4 text-dark-text"
+                      className="w-3.5 h-3.5 text-muted"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -128,20 +128,20 @@ const InPlanDetails = async ({ params }) => {
                         clipRule="evenodd"
                       />
                     </svg>
-                    <span className="text-sm font-medium text-dark-text">
+                    <span className="text-[12px] tracking-[0.08em] uppercase text-light-gray">
                       {project?.location}
                     </span>
                   </div>
 
-                  <div className="flex items-center gap-2 bg-light-gray/10 px-4 py-2 rounded-full">
+                  <div className="flex items-center gap-2 border border-hairline bg-white px-4 py-2 rounded-full">
                     <svg
-                      className="w-4 h-4 text-dark-text"
+                      className="w-3.5 h-3.5 text-muted"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
                       <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
                     </svg>
-                    <span className="text-sm font-medium text-dark-text">
+                    <span className="text-[12px] tracking-[0.08em] uppercase text-light-gray">
                       {project?.type}
                     </span>
                   </div>
@@ -258,7 +258,7 @@ const InPlanDetails = async ({ params }) => {
         `}</style>
       </div>
       <div className="bg-green w-full flex flex-col gap-10 items-center justify-center py-12 px-4 sm:px-10 md:px-20 lg:px-32 xl:px-44 mb-16">
-        <h3 className="text-white font-normal text-5xl">
+        <h3 className="text-white font-display font-semibold tracking-[-0.02em] text-4xl sm:text-5xl">
           {strapiLocale === "hr-HR" ? "Tlocrt nekretnine" : "Property blueprint"}
         </h3>
         <DownloadButton

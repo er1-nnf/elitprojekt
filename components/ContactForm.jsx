@@ -224,7 +224,7 @@ export default function ContactForm({ locale }) {
       <button
         type="submit"
         disabled={status === t.sending}
-        className="bg-white text-dark-text px-4 py-2 w-full rounded-[8px] sm:rounded-[10px] h-[40px] sm:h-[43px] mt-6 sm:mt-8 font-medium text-sm sm:text-base transition-opacity duration-200 disabled:opacity-70"
+        className="bg-white text-ink hover:bg-cta-color hover:text-white px-4 py-2 w-full rounded-full h-[42px] sm:h-[46px] mt-6 sm:mt-8 font-medium text-sm sm:text-base transition-colors duration-200 disabled:opacity-70"
       >
         {status === t.sending ? t.sending : t.submitButton}
       </button>

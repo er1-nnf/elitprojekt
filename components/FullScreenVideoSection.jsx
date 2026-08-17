@@ -98,14 +98,14 @@ const FullScreenVideoSection = ({ locale, videoUrl = "/video/elitProjektVideo_op
       {/* Black gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent pointer-events-none"></div>
 
-      <div className="absolute bottom-8 left-8 text-white">
+      <div className="absolute bottom-0 left-0 right-0 flex items-end justify-between px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pb-8 sm:pb-10">
         <Link
           href={localeHref(locale, "/in-plan/projekt-zagreb-rudes")}
-          className="flex items-center gap-3 text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] xl:text-[36px] font-medium text-white hover:text-gray-200 transition-colors duration-200 cursor-pointer group"
+          className="flex items-center gap-3 font-display font-semibold tracking-[-0.015em] text-[22px] sm:text-[26px] md:text-[30px] lg:text-[34px] text-white hover:text-gray-200 transition-colors duration-200 cursor-pointer group"
         >
           Projekt Zagreb - Rudeš
           <svg
-            className="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 xl:w-10 xl:h-10 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200"
+            className="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 text-cta-color group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -113,6 +113,9 @@ const FullScreenVideoSection = ({ locale, videoUrl = "/video/elitProjektVideo_op
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
           </svg>
         </Link>
+        <span className="hidden sm:block text-[12px] tracking-[0.12em] uppercase text-white/75 pb-2">
+          {locale === "hr" ? "Trenutno u planu" : "Now in plan"}
+        </span>
       </div>
     </div>
   );

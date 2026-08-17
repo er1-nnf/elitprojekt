@@ -13,11 +13,17 @@ export default {
         "gray": '#383838',
         "green": "#09261D",
         "dark-text": "#222222",
-        "light-gray": "#959595",
+        "light-gray": "#6C665E",
         "card-bg": "#F8F8F8",
-        "cta-color": "#EE770F",
+        "cta-color": "#E86F1A",
         "brand-color": "#0A3264",
-        "bg": "#FFFFFF"
+        "bg": "#FFFFFF",
+        "ink": "#131211",
+        "hairline": "#EAE7E1",
+        "muted": "#98928A"
+      },
+      fontFamily: {
+        display: ['var(--font-display)', 'var(--font-inter)', 'sans-serif'],
       },
       aspectRatio: {
         '4/5': '4 / 5',

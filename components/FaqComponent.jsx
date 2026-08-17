@@ -19,8 +19,8 @@ const FaqComponent = ({ content }) => {
         <div className="max-w-[1400px] w-full grid md:grid-cols-2 gap-16">
           {/* Left side - Title */}
           <div className="flex flex-col gap-4">
-            <h2 className="text-[35px] sm:text-5xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-5xl font-medium text-dark-text max-w-[442px] leading-tight">{content?.faqTitle}</h2>
-            <h2 className="text-md sm:text-md md:text-md lg:text-base xl:text-lg 2xl:text-lg font-normal text-light-gray max-w-[442px] leading-tight">{content?.faqSubtitle}</h2>
+            <h2 className="font-display font-semibold text-[34px] sm:text-[44px] tracking-[-0.02em] text-ink max-w-[442px] leading-tight text-balance">{content?.faqTitle}</h2>
+            <h2 className="text-sm sm:text-[15px] font-normal text-light-gray max-w-[420px] leading-relaxed">{content?.faqSubtitle}</h2>
           </div>
 
           {/* Right side - FAQ list */}
@@ -31,7 +31,7 @@ const FaqComponent = ({ content }) => {
                   onClick={() => toggleFAQ(index)}
                   className="flex justify-between items-center w-full text-left font-medium text-lg"
                 >
-                  <h3 className="text-dark-text font-medium text-xl">{faq.question}</h3>
+                  <h3 className="text-ink font-medium text-lg sm:text-xl pr-4">{faq.question}</h3>
                   {openIndex === index ? (
                     <Minus className="w-10 h-10 border-1 border-dark-text/10 p-2 rounded-full" />
                   ) : (

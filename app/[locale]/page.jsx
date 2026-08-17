@@ -48,7 +48,7 @@ const HomePage = async ({ params }) => {
   return (
     <>
       <HeroSection locale={locale} content={content} />
-      <FullScreenVideoSection videoUrl="/video/elitProjektVideo_optimized.mp4" />
+      <FullScreenVideoSection locale={locale} videoUrl="/video/elitProjektVideo_optimized.mp4" />
       <ConstructionProjects
         locale={locale}
         content={content}

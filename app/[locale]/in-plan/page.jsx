@@ -37,7 +37,7 @@ const InPlan = async ({ params }) => {
   return (
     <>
       <div className="px-4 sm:px-6 md:px-8 lg:px-11 xl:px-11 pt-32 flex flex-col items-center justify-center bg-white">
-      <h3 className="font-medium text-[35px] sm:text-[48px] md:text-[48px] lg:text-[48px] xl:text-[57px] 2xl:text-[60px] text-center leading-tight text-dark-color">
+      <h3 className="font-display font-semibold text-[34px] sm:text-[44px] md:text-[48px] xl:text-[54px] text-center leading-tight tracking-[-0.02em] text-ink text-balance">
           {strapiLocale === "hr-HR" ? "Gradimo nekretnine s vizijom" : "We build properties with vision"}
         </h3>
 

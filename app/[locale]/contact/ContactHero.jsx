@@ -25,7 +25,7 @@ const ContactHero = ({ locale }) => {
         }}
       />
       <div className="flex flex-col gap-6 z-50">
-        <h1 className="text-white font-medium text-3xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-6xl 2xl:text-6xl">
+        <h1 className="text-white font-display font-semibold tracking-[-0.02em] text-3xl sm:text-5xl lg:text-6xl">
           {strapiLocale === "hr-HR" ? "Kontaktiraj nas" : "Contact Us"}
         </h1>
         <p className="text-white font-normal text-lg max-w-[480px]">

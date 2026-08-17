@@ -73,7 +73,7 @@ const BlogDetails = async ({ params }) => {
   return (
     <>
       <div className="px-4 py-32 bg-white flex flex-col items-center justify-center">
-        <h1 className="text-black font-medium lg:text-[60px] text-[30px] max-w-[800px] text-center text-pretty leading-none pt-12 pb-4 w-full">
+        <h1 className="text-ink font-display font-semibold tracking-[-0.02em] lg:text-[56px] text-[30px] max-w-[800px] text-center text-pretty leading-none pt-12 pb-4 w-full">
           {blog.Title}
         </h1>
         <p className="text-dark-text text-xl font-normal max-w-[700px] text-center tracking-wide leading-relaxed">

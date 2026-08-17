@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import { Bricolage_Grotesque } from "next/font/google";
 import Script from "next/script";
 import { notFound } from "next/navigation";
 import "../globals.css";
@@ -12,6 +13,12 @@ import LenisProvider from "@/components/LenisProvider";
 const inter = localFont({
   src: "../../assets/fonts/InterVariable.woff2",
   variable: "--font-inter",
+  display: "swap",
+});
+
+const bricolage = Bricolage_Grotesque({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-display",
   display: "swap",
 });
 
@@ -72,7 +79,7 @@ export default async function LocaleLayout({ children, params }) {
           `}
         </Script>
       </head>
-      <body className={`${inter.variable} font-sans`}>
+      <body className={`${inter.variable} ${bricolage.variable} font-sans`}>
         <LenisProvider>
           <Header locale={locale} />
           <div className="bg-white" id="main-container">

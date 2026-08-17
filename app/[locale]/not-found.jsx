@@ -24,7 +24,7 @@ const NotFound = () => {
         <div className="flex-1 flex items-center justify-center px-6 lg:px-16 py-12">
           <div className="max-w-2xl">
             <div className="mb-8">
-              <h1 className="text-5xl lg:text-7xl font-bold text-black mb-6 leading-tight">
+              <h1 className="font-display font-semibold tracking-[-0.02em] text-5xl lg:text-7xl text-ink mb-6 leading-tight">
                 Stranica nije
                 <br />
                 <span className="text-gray-400">pronađena</span>

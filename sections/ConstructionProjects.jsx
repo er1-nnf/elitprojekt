@@ -20,11 +20,11 @@ const ConstructionProjects = ({ locale, content, projects }) => {
   return (
     <div className="flex items-center justify-center">
       <div className="flex flex-col gap-3 sm:gap-4 items-center justify-center pb-16 sm:pb-20 md:pb-24 lg:pb-32 bg-white w-full py-24 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-        <h3 className="font-medium text-[35px] sm:text-[48px] md:text-[48px] lg:text-[48px] xl:text-[57px] 2xl:text-[60px] text-center leading-tight text-dark-color">
+        <h3 className="font-display font-semibold text-[34px] sm:text-[44px] md:text-[48px] xl:text-[54px] text-center leading-tight tracking-[-0.02em] text-ink text-balance">
           {content?.inConstructionTitle}
         </h3>
 
-        <p className="font-normal text-sm sm:text-base md:text-base lg:text-base text-center pretty tracking-wide leading-5 sm:leading-6 md:leading-7 max-w-[90%] sm:max-w-[550px] md:max-w-[650px] text-light-gray px-2">
+        <p className="font-normal text-sm sm:text-[15px] text-center leading-relaxed max-w-[90%] sm:max-w-[520px] text-light-gray px-2">
           {content?.inConstructionSubtitle}
         </p>
 
@@ -70,22 +70,27 @@ const ConstructionProjects = ({ locale, content, projects }) => {
           >
             {sortedProjects?.map((project) => (
               <SwiperSlide key={project.id}>
-                <div className="relative w-full h-[400px] rounded-lg sm:rounded-xl overflow-hidden shadow-lg group">
-                  <Link href={localeHref(locale, `/in-construction/${project.slug}`)} className="block relative w-full h-full">
+                <Link href={localeHref(locale, `/in-construction/${project.slug}`)} className="block w-full group">
+                  <div className="relative w-full h-[340px] sm:h-[380px] rounded-[12px] overflow-hidden bg-card-bg">
                     <Image
                       src={project.coverImage.url}
                       alt={project.name}
                       fill
                       sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 33vw"
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.035]"
                     />
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/100 via-black/50 to-transparent p-8 flex flex-col justify-end h-full">
-                      <h3 className="text-white font-bold text-3xl max-w-[90%] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] leading-tight">
-                        {project.name}
-                      </h3>
-                    </div>
-                  </Link>
-                </div>
+                  </div>
+                  <div className="flex items-baseline justify-between gap-4 pt-4 px-1 pb-1">
+                    <h3 className="font-display font-semibold text-[18px] sm:text-[19px] tracking-[-0.01em] text-ink leading-snug group-hover:underline underline-offset-4 decoration-cta-color decoration-[1.5px]">
+                      {project.name}
+                    </h3>
+                    {project.location && (
+                      <span className="text-[11px] tracking-[0.1em] uppercase text-muted whitespace-nowrap">
+                        {project.location}
+                      </span>
+                    )}
+                  </div>
+                </Link>
               </SwiperSlide>
             ))}
           </Swiper>

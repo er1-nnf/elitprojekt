@@ -68,7 +68,7 @@ const AboutPage = async ({ params }) => {
       <div className="pt-32 flex flex-col items-start justify-center gap-6 sm:gap-8 lg:gap-10 bg-white px-4 sm:px-6 md:px-8 lg:px-8">
 
         {/* Hero title */}
-        <h1 className="text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] xl:text-[65px] max-w-full lg:max-w-[900px] font-medium text-pretty leading-none">
+        <h1 className="font-display font-semibold tracking-[-0.02em] text-[32px] sm:text-[40px] md:text-[50px] lg:text-[58px] xl:text-[64px] max-w-full lg:max-w-[900px] text-balance leading-[1.02]">
           {aboutContent?.heroTitle}
         </h1>
 
@@ -124,7 +124,7 @@ const AboutPage = async ({ params }) => {
         </div>
 
         {/* Work location section */}
-        <h1 className="text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] xl:text-[65px] max-w-full lg:max-w-[900px] font-medium text-pretty leading-none mt-16 sm:mt-20 md:mt-24 lg:mt-32">
+        <h1 className="font-display font-semibold tracking-[-0.02em] text-[32px] sm:text-[40px] md:text-[50px] lg:text-[58px] xl:text-[64px] max-w-full lg:max-w-[900px] text-balance leading-[1.02] mt-16 sm:mt-20 md:mt-24 lg:mt-32">
           {aboutContent?.workLocation}
         </h1>
 

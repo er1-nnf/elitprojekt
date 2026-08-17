@@ -35,7 +35,7 @@ const NavBar = ({ locale, isOpen, setOpen }) => {
   return (
     <header
       style={{ zIndex: 999 }}
-      className="fixed w-full flex justify-center px-4 lg:px-16 bg-white"
+      className="fixed w-full flex justify-center px-4 lg:px-16 bg-white border-b border-hairline"
     >
       <motion.nav className="flex items-center justify-between w-full py-3">
         {/* Navigation Links */}
@@ -90,7 +90,7 @@ const NavBar = ({ locale, isOpen, setOpen }) => {
           </NavItem>
 
           <Link href={localeHref(locale, ROUTES.CONTACT)}>
-            <button className="bg-white hover:bg-black text-text-dark-text hover:text-white px-6 py-4 font-medium xl:flex hidden hover:bg-gray-800 transition-colors duration-200">
+            <button className="bg-ink text-white hover:bg-cta-color px-6 py-3 rounded-full text-sm font-medium xl:flex hidden transition-colors duration-200">
               {strapiLocale === "hr-HR" && "Želim nekretninu"}
               {strapiLocale === "en" && "I want a property"}
               {strapiLocale === "de-DE" && "Starte dein Projekt"}
