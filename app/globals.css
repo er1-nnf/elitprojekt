@@ -475,3 +475,23 @@ button {
   position: relative !important;
   margin-top: 100px !important;
 }
+/* Swiper pagination bullets: 24px touch targets (WCAG 2.5.8) with a visual dot */
+.swiper-pagination-bullet {
+  width: 24px !important;
+  height: 24px !important;
+  background: transparent !important;
+  opacity: 1 !important;
+  position: relative;
+  margin: 0 2px !important;
+}
+.swiper-pagination-bullet::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border-radius: 9999px;
+  background: #C6C1B8;
+  transition: background 0.2s;
+}
+.swiper-pagination-bullet-active::after {
+  background: #131211;
+}

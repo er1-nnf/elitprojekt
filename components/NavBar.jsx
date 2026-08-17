@@ -70,7 +70,10 @@ const NavBar = ({ locale, isOpen, setOpen }) => {
 
         {/* Logo */}
         <div className="flex items-center">
-          <Link href={localeHref(locale, ROUTES.HOME)}>
+          <Link
+            href={localeHref(locale, ROUTES.HOME)}
+            aria-label={strapiLocale === "hr-HR" ? "Elit Projekt — naslovna" : "Elit Projekt — home"}
+          >
             <DiPlanLogo width={152} height={48} color="black" />
           </Link>
         </div>
@@ -104,6 +107,7 @@ const NavBar = ({ locale, isOpen, setOpen }) => {
               toggle={setOpen}
               direction="right"
               color={"#000000"}
+              label={strapiLocale === "hr-HR" ? "Izbornik" : "Menu"}
             />
           </div>
         </div>

@@ -20,9 +20,9 @@ const ConstructionProjects = ({ locale, content, projects }) => {
   return (
     <div className="flex items-center justify-center">
       <div className="flex flex-col gap-3 sm:gap-4 items-center justify-center pb-16 sm:pb-20 md:pb-24 lg:pb-32 bg-white w-full py-24 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-        <h3 className="font-display font-semibold text-[34px] sm:text-[44px] md:text-[48px] xl:text-[54px] text-center leading-tight tracking-[-0.02em] text-ink text-balance">
+        <h2 className="font-display font-semibold text-[34px] sm:text-[44px] md:text-[48px] xl:text-[54px] text-center leading-tight tracking-[-0.02em] text-ink text-balance">
           {content?.inConstructionTitle}
-        </h3>
+        </h2>
 
         <p className="font-normal text-sm sm:text-[15px] text-center leading-relaxed max-w-[90%] sm:max-w-[520px] text-light-gray px-2">
           {content?.inConstructionSubtitle}
@@ -43,7 +43,6 @@ const ConstructionProjects = ({ locale, content, projects }) => {
             }}
             pagination={{
               clickable: true,
-              dynamicBullets: true,
             }}
             breakpoints={{
               480: {

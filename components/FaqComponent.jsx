@@ -20,7 +20,7 @@ const FaqComponent = ({ content }) => {
           {/* Left side - Title */}
           <div className="flex flex-col gap-4">
             <h2 className="font-display font-semibold text-[34px] sm:text-[44px] tracking-[-0.02em] text-ink max-w-[442px] leading-tight text-balance">{content?.faqTitle}</h2>
-            <h2 className="text-sm sm:text-[15px] font-normal text-light-gray max-w-[420px] leading-relaxed">{content?.faqSubtitle}</h2>
+            <p className="text-sm sm:text-[15px] font-normal text-light-gray max-w-[420px] leading-relaxed">{content?.faqSubtitle}</p>
           </div>
 
           {/* Right side - FAQ list */}

@@ -71,7 +71,7 @@ const CookieBanner = () => {
               <button onClick={rejectAll} className="rounded-lg text-sm border px-4 py-2">
                 Reject all
               </button>
-              <button onClick={acceptAll} className="rounded-lg text-sm bg-green/50 px-4 py-2 text-white">
+              <button onClick={acceptAll} className="rounded-lg text-sm bg-green px-4 py-2 text-white">
                 Accept all
               </button>
             </div>

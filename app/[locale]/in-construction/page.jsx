@@ -37,9 +37,9 @@ const InConstruction = async ({ params }) => {
   return (
     <>
       <div className="px-4 sm:px-6 md:px-8 lg:px-11 xl:px-11 pt-32 flex flex-col items-center justify-center bg-white">
-      <h3 className="font-display font-semibold text-[34px] sm:text-[44px] md:text-[48px] xl:text-[54px] text-center leading-tight tracking-[-0.02em] text-ink text-balance">
+      <h1 className="font-display font-semibold text-[34px] sm:text-[44px] md:text-[48px] xl:text-[54px] text-center leading-tight tracking-[-0.02em] text-ink text-balance">
           {strapiLocale === "hr-HR" ? "Pregledajte naše nekretnine" : "View our properties"}
-        </h3>
+        </h1>
 
         <p className="font-normal text-sm sm:text-base md:text-base lg:text-base text-center pretty tracking-wide leading-5 sm:leading-6 md:leading-7 max-w-[90%] sm:max-w-[550px] md:max-w-[650px] text-light-gray px-2 pb-12">
           {strapiLocale === "hr-HR" ? "Od novogradnje u Zagrebu do obalnih vila - u našoj ponudi pronaći ćete dom koji odgovara vašem stilu života." : "From new construction in Zagreb to coastal villas - in our offer you will find a home that matches your lifestyle."}

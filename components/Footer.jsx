@@ -151,9 +151,9 @@ const Footer = ({ locale }) => {
 
           {/* Big ELIT PROJEKT text */}
           <div className="overflow-hidden px-2">
-            <h1 className="font-display text-[56px] sm:text-[96px] md:text-[116px] lg:text-[146px] xl:text-[172px] font-bold tracking-[-0.03em] text-ink leading-[0.8] text-center select-none">
+            <p className="font-display text-[56px] sm:text-[96px] md:text-[116px] lg:text-[146px] xl:text-[172px] font-bold tracking-[-0.03em] text-ink leading-[0.8] text-center select-none">
               ELIT PROJEKT
-            </h1>
+            </p>
           </div>
 
           {/* Bottom section */}

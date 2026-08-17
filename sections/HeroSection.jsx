@@ -131,9 +131,9 @@ const HeroSection = ({ locale, content }) => {
             className="flex items-baseline justify-between gap-4 pt-4 px-1"
             variants={titleVariants}
           >
-            <h3 className="font-display font-semibold text-[19px] sm:text-[21px] tracking-[-0.01em] group-hover:underline underline-offset-4 decoration-cta-color decoration-[1.5px]">
+            <p className="font-display font-semibold text-[19px] sm:text-[21px] tracking-[-0.01em] group-hover:underline underline-offset-4 decoration-cta-color decoration-[1.5px]">
               Trogir - Centar
-            </h3>
+            </p>
             <span className="text-[12px] tracking-[0.1em] uppercase text-muted whitespace-nowrap">
               {locale === "hr" ? "Trogir · U planu" : "Trogir · In plan"}
             </span>
@@ -159,9 +159,9 @@ const HeroSection = ({ locale, content }) => {
             className="flex items-baseline justify-between gap-4 pt-4 px-1"
             variants={titleVariants}
           >
-            <h3 className="font-display font-semibold text-[19px] sm:text-[21px] tracking-[-0.01em] group-hover:underline underline-offset-4 decoration-cta-color decoration-[1.5px]">
+            <p className="font-display font-semibold text-[19px] sm:text-[21px] tracking-[-0.01em] group-hover:underline underline-offset-4 decoration-cta-color decoration-[1.5px]">
               Stambeno Naselje Orešje
-            </h3>
+            </p>
             <span className="text-[12px] tracking-[0.1em] uppercase text-muted whitespace-nowrap">
               {locale === "hr" ? "Sveta Nedelja · U izgradnji" : "Sveta Nedelja · In construction"}
             </span>

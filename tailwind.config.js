@@ -20,7 +20,7 @@ export default {
         "bg": "#FFFFFF",
         "ink": "#131211",
         "hairline": "#EAE7E1",
-        "muted": "#98928A"
+        "muted": "#6C665E"
       },
       fontFamily: {
         display: ['var(--font-display)', 'var(--font-inter)', 'sans-serif'],

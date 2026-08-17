@@ -113,7 +113,7 @@ const FullScreenVideoSection = ({ locale, videoUrl = "/video/elitProjektVideo_op
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
           </svg>
         </Link>
-        <span className="hidden sm:block text-[12px] tracking-[0.12em] uppercase text-white/75 pb-2">
+        <span className="hidden sm:block text-[12px] tracking-[0.12em] uppercase text-white/90 pb-2">
           {locale === "hr" ? "Trenutno u planu" : "Now in plan"}
         </span>
       </div>

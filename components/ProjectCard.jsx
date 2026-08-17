@@ -15,9 +15,9 @@ const ProjectCard = (props) => {
         />
       </div>
       <div className="flex items-baseline justify-between gap-4 pt-4 px-1">
-        <h3 className="font-display font-semibold text-[20px] sm:text-[22px] tracking-[-0.01em] text-ink group-hover:underline underline-offset-4 decoration-cta-color decoration-[1.5px]">
+        <h2 className="font-display font-semibold text-[20px] sm:text-[22px] tracking-[-0.01em] text-ink group-hover:underline underline-offset-4 decoration-cta-color decoration-[1.5px]">
           {props.name}
-        </h3>
+        </h2>
         <span className="flex items-center gap-1 text-[12px] tracking-[0.1em] uppercase text-muted whitespace-nowrap">
           {/* Pin icon for location */}
           <svg
