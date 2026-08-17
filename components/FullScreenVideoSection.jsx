@@ -80,7 +80,7 @@ const FullScreenVideoSection = ({ locale, videoUrl = "/video/elitProjektVideo_op
           muted={isMuted}
           loop={true}
           playsInline
-          preload="none"
+          preload="auto"
           poster={posterImage}
           onEnded={handleVideoEnded}
           onClick={handleVideoClick}

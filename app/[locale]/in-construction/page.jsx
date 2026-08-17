@@ -44,7 +44,7 @@ const InConstruction = async ({ params }) => {
         <p className="font-normal text-sm sm:text-base md:text-base lg:text-base text-center pretty tracking-wide leading-5 sm:leading-6 md:leading-7 max-w-[90%] sm:max-w-[550px] md:max-w-[650px] text-light-gray px-2 pb-12">
           {strapiLocale === "hr-HR" ? "Od novogradnje u Zagrebu do obalnih vila - u našoj ponudi pronaći ćete dom koji odgovara vašem stilu života." : "From new construction in Zagreb to coastal villas - in our offer you will find a home that matches your lifestyle."}
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 2xl:grid-cols-2 gap-11 pb-32">
+        <div className="grid w-full grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 2xl:grid-cols-2 gap-11 pb-32">
           {projects?.map((project, index) => (
             <ProjectCard
               key={index}

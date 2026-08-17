@@ -4,11 +4,11 @@ import { localeHref } from "@/lib/locales";
 
 const ProjectCard = (props) => {
   return (
-    <Link href={localeHref(props.locale, `/${props.route}/${props.slug}`)}>
+    <Link href={localeHref(props.locale, `/${props.route}/${props.slug}`)} className="block w-full">
       <div className="relative w-full h-[450px] rounded-xl overflow-hidden shadow-lg group">
         <Image
           src={props.image}
-          alt={props.title}
+          alt={props.name}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"

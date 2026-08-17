@@ -107,7 +107,7 @@ const HeroSection = ({ locale, content }) => {
         variants={containerVariants}
       >
         {/* Trogir card */}
-        <Link href={localeHref(locale, "/in-plan/trogir-centar")}>
+        <Link href={localeHref(locale, "/in-plan/trogir-centar")} className="block w-full">
         <motion.div
           className="group relative flex flex-col items-end justify-end overflow-hidden rounded-[12px] sm:rounded-[16px] lg:rounded-[20px] w-full h-[300px] sm:h-[400px] lg:h-[500px]"
           variants={cardVariants}
@@ -137,7 +137,7 @@ const HeroSection = ({ locale, content }) => {
         </Link>
 
         {/* Borovje card */}
-        <Link href={localeHref(locale, "/in-construction/stambeno-naselje-oresje")}>
+        <Link href={localeHref(locale, "/in-construction/stambeno-naselje-oresje")} className="block w-full">
         <motion.div
           className="group relative flex flex-col items-end justify-end overflow-hidden rounded-[12px] sm:rounded-[16px] lg:rounded-[20px] w-full h-[300px] sm:h-[400px] lg:h-[500px]"
           variants={cardVariants}

@@ -74,7 +74,7 @@ const PlanedProjects = ({ locale, content, projects }) => {
             {sortedProjects?.map((project) => (
               <SwiperSlide key={project.id}>
                 <div className="relative w-full h-[400px] rounded-lg sm:rounded-xl overflow-hidden shadow-lg group">
-                  <Link href={localeHref(locale, `/in-plan/${project.slug}`)}>
+                  <Link href={localeHref(locale, `/in-plan/${project.slug}`)} className="block relative w-full h-full">
                     <Image
                       src={project.coverImage.url}
                       alt={project.name}
