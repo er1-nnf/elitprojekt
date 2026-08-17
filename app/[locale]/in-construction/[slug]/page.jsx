@@ -68,7 +68,7 @@ const InConstructionDetails = async ({ params }) => {
             "@context": "https://schema.org",
             "@type": "ApartmentComplex",
             name: project.name,
-            url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://elitprojekt.com"}/${locale}/in-construction/${slug}`,
+            url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://www.elitprojekt.com"}/${locale}/in-construction/${slug}`,
             image: project?.coverImage?.url,
             address: {
               "@type": "PostalAddress",

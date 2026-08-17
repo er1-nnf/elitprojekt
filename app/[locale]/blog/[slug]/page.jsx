@@ -4,7 +4,7 @@ import ReactMarkdown from "react-markdown";
 import { getBlogBySlug, getAllBlogSlugs } from "@/lib/strapi";
 import { toUrlLocale } from "@/lib/locales";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://elitprojekt.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.elitprojekt.com";
 
 // Strapi's shareImage can be a media object; the old code passed the raw
 // value straight into the og:image meta tag. Normalize to a URL string here.

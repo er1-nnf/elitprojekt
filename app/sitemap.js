@@ -4,7 +4,7 @@ import {
 } from "@/lib/strapi";
 import { URL_LOCALES, toUrlLocale } from "@/lib/locales";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://elitprojekt.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.elitprojekt.com";
 
 export default async function sitemap() {
   const staticPaths = ["", "/about-us", "/contact", "/in-plan", "/in-construction"];
