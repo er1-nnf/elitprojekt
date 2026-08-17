@@ -13,13 +13,26 @@ const sortBySortNumber = (projects) =>
     return sortA - sortB;
   });
 
-export async function generateMetadata({ params }) {
-  const { locale } = await params;
-  return {
-    alternates: pageAlternates(locale, "/in-construction"),
+const META = {
+  hr: {
     title: "U Izgradnji | ElitProjekt | Stanovi Zagreb & Jadranska obala",
     description:
       "Pogledajte aktualne projekte u izgradnji ElitProjekt - stanovi u Zagrebu, objekti na jadranskoj obali. Kvalitetna gradnja, moderna rješenja, potpuna dokumentacija.",
+  },
+  en: {
+    title: "In Construction | ElitProjekt | Apartments Zagreb & Adriatic coast",
+    description:
+      "See ElitProjekt's projects currently under construction - apartments in Zagreb and properties on the Adriatic coast. Quality construction, modern design, complete documentation.",
+  },
+};
+
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  const meta = META[locale] ?? META.hr;
+  return {
+    alternates: pageAlternates(locale, "/in-construction"),
+    title: meta.title,
+    description: meta.description,
   };
 }
 
