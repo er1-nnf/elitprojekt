@@ -3,7 +3,13 @@ const nextConfig = {
   turbopack: {
     root: import.meta.dirname,
   },
+  // Inline the (small) CSS into the HTML instead of render-blocking
+  // stylesheet requests.
+  experimental: {
+    inlineCss: true,
+  },
   images: {
+    qualities: [60, 75],
     remotePatterns: [
       {
         protocol: "https",

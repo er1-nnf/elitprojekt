@@ -7,8 +7,6 @@ import trogir from "@/assets/images/trogirCentar.webp";
 import borovje from "@/assets/images/stamb-nas-oresje.jpg";
 import { localeHref } from "@/lib/locales";
 
-const MotionImage = motion.create(Image);
-
 const HeroSection = ({ locale, content }) => {
   // Transform-only animations: elements stay visible (opacity 1) in the
   // server-rendered HTML so the hero paints before hydration (LCP), then
@@ -117,15 +115,17 @@ const HeroSection = ({ locale, content }) => {
         <Link href={localeHref(locale, "/in-plan/trogir-centar")} className="block w-full">
         <motion.div className="group w-full" variants={cardVariants}>
           <div className="relative overflow-hidden rounded-[12px] sm:rounded-[14px] w-full h-[300px] sm:h-[400px] lg:h-[460px] bg-card-bg">
-            <MotionImage
-              src={trogir}
-              alt="Trogir - Centar"
-              fill
-              priority
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.035]"
-              variants={imageVariants}
-            />
+            <motion.div className="absolute inset-0" variants={imageVariants}>
+              <Image
+                src={trogir}
+                alt="Trogir - Centar"
+                fill
+                priority
+                fetchPriority="high"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.035]"
+              />
+            </motion.div>
           </div>
           <motion.div
             className="flex items-baseline justify-between gap-4 pt-4 px-1"
@@ -145,15 +145,16 @@ const HeroSection = ({ locale, content }) => {
         <Link href={localeHref(locale, "/in-construction/stambeno-naselje-oresje")} className="block w-full">
         <motion.div className="group w-full" variants={cardVariants}>
           <div className="relative overflow-hidden rounded-[12px] sm:rounded-[14px] w-full h-[300px] sm:h-[400px] lg:h-[460px] bg-card-bg">
-            <MotionImage
-              src={borovje}
-              alt="Stambeno Naselje Orešje"
-              fill
-              priority
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.035]"
-              variants={imageVariants}
-            />
+            <motion.div className="absolute inset-0" variants={imageVariants}>
+              <Image
+                src={borovje}
+                alt="Stambeno Naselje Orešje"
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.035]"
+              />
+            </motion.div>
           </div>
           <motion.div
             className="flex items-baseline justify-between gap-4 pt-4 px-1"
