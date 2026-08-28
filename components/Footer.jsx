@@ -161,6 +161,17 @@ const Footer = ({ locale }) => {
             <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-4">
               <p className="text-muted text-xs sm:text-sm text-center sm:text-left">
                 © 2025 ELIT PROJEKT D.O.O. ALL RIGHTS RESERVED
+                <span className="hidden sm:inline"> · </span>
+                <br className="sm:hidden" />
+                Izrada:{" "}
+                <a
+                  href="https://www.ninefold.eu"
+                  target="_blank"
+                  rel="noopener"
+                  className="text-muted hover:text-ink transition-colors"
+                >
+                  Ninefold
+                </a>
               </p>
               <div className="flex flex-wrap items-center justify-center sm:justify-end gap-4 sm:gap-6 w-full sm:w-auto">
                 <a href="#" className="text-muted hover:text-ink text-xs sm:text-sm transition-colors">
