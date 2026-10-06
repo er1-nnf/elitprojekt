@@ -9,6 +9,13 @@ const nextConfig = {
     inlineCss: true,
   },
   images: {
+    // S3/Strapi send no Cache-Control, so without this Vercel re-optimizes
+    // every image after a short TTL — that burned through the Hobby plan's
+    // 5K transformations/month. Cache optimized images for 31 days.
+    minimumCacheTTL: 2678400,
+    // Fewer srcset widths = fewer unique transformations per image.
+    deviceSizes: [640, 1080, 1920],
+    imageSizes: [256, 384],
     qualities: [60, 75],
     remotePatterns: [
       {
